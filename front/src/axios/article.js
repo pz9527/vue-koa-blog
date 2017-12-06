@@ -7,7 +7,7 @@ export default {
         return axios.post('/artcile/', data)
     },
     getArticleById(id) {
-        return axios.get(`/article?id=${id}`)
+        return axios.get(`/article?id=${id}`) 
     }, getArticleByPage(limit, page, cate) {
         return axios.get(`/article?limit=${limit}&page=${page}&cate=${cate}`)
     },
