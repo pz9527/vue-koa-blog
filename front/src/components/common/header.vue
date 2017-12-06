@@ -43,9 +43,7 @@
           </el-dialog>
 
           <el-dropdown  type="primary"  @command="handleCommand" v-if="seen1">
-             <span class="el-dropdown-link">
-    下拉菜单
-  </span>
+             <span class="el-dropdown-link">我的设置</span>
             <el-dropdown-menu slot="dropdown" >
               <el-dropdown-item command='/home/person'>我的首页</el-dropdown-item>
               <el-dropdown-item>我的消息</el-dropdown-item>
