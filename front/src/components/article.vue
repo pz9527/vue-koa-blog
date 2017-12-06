@@ -35,15 +35,14 @@
 </script>
 <style>
   pre{
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.03);
     font:14px/25px 'Comic Sans MS','courier new';
-    margin: 1.5em 10px;
+    margin:5px;
     border-radius: 5px;
   }
   blockquote {
-    background: #f9f9f9;
     border-left: 6px solid #ccc;
-    margin: 1.5em 10px;
+    margin: 1em 5px;
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
   }

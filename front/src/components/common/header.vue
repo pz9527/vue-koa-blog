@@ -3,12 +3,12 @@
     <el-row type="flex" align="middle">
       <el-col :span="1"></el-col>
       <el-col :xs="10" :sm="8" >
-      <span style="font-family: 'Comic Sans MS';color: darkgray;font-size: large;padding:5px">LearnNode</span>
+      <span style="font-family: 'Comic Sans MS';color: darkgray;font-size: large;padding:5px;">LearnNode</span>
         <el-input
           v-model="input"
           placeholder="搜索内容"
           prefix-icon="el-icon-search"
-          style="width: 200px;padding: 4px;margin-left: 30px"
+          style="width: 200px;padding: 4px;margin-left: 25px"
           size="mini"></el-input>
       </el-col>
       <el-col :xs="0" :sm="13">
@@ -29,7 +29,7 @@
               <el-button type="primary" @click="login">确 定</el-button>
             </div>
           </el-dialog>
-          <el-button  @click="dialogSignup = true" type="text" style="color:#5A5E66" v-if="seen" disabled>注册</el-button>
+          <el-button  @click="dialogSignup = true" type="text" style="color:#5A5E66" v-if="seen" >注册</el-button>
           <el-dialog title="注册信息" :visible.sync="dialogSignup" width="350px" :center="true">
             <el-input v-model="form.name" auto-complete="off" placeholder="请输入账号"></el-input>
             <br/><br/>
