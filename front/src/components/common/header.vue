@@ -3,7 +3,7 @@
     <el-row type="flex" align="middle">
       <el-col :span="1"></el-col>
       <el-col :xs="10" :sm="8" >
-      <span style="font-family: 'Comic Sans MS';color: darkgray;font-size: large">&nbspLearnNode</span>
+      <span style="font-family: 'Comic Sans MS';color: darkgray;font-size: large;padding:5px">LearnNode</span>
         <el-input
           v-model="input"
           placeholder="搜索内容"
