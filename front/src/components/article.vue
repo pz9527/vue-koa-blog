@@ -43,9 +43,9 @@
     border-radius: 5px;
   }
   blockquote {
-    padding: 0.2em;
+    padding: 0.4em;
     border-left: 6px solid #ccc;
-    font-size: small;
+    font-size: 16px;
   }
   a,p{
     font-family:"	SimSun";
