@@ -37,16 +37,18 @@
   pre{
     background-color: rgba(0,0,0,0.03);
     font:14px/25px 'Comic Sans MS','courier new';
-    margin:5px;
+    padding: 0.5em;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-radius: 5px;
   }
   blockquote {
+    padding: 0.2em;
     border-left: 6px solid #ccc;
-    margin: 1em 5px;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+    font-size: small;
   }
-  article{
+  a,p{
     font-family:"	SimSun";
+    font-size: small;
   }
 </style>
