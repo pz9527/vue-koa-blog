@@ -29,7 +29,7 @@
               <el-button type="primary" @click="login">确 定</el-button>
             </div>
           </el-dialog>
-          <el-button  @click="dialogSignup = true" type="text" style="color:#5A5E66" v-if="seen" >注册</el-button>
+          <el-button  @click="dialogSignup = true" type="text" style="color:#5A5E66" v-if="seen" disabled>注册</el-button>
           <el-dialog title="注册信息" :visible.sync="dialogSignup" width="350px" :center="true">
             <el-input v-model="form.name" auto-complete="off" placeholder="请输入账号"></el-input>
             <br/><br/>

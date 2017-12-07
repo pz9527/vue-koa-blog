@@ -3,6 +3,7 @@ const userModel = blogDb.import('../model/user.js')
 const jwt = require('jsonwebtoken')
 const jwtconfig = require('../config/token')
 const crypto = require("crypto");
+
 class userController {
     static async getUserById(ctx) {
         let id = ctx.params.id
@@ -11,14 +12,14 @@ class userController {
 
     static async login(ctx) {
         let {name, password} = ctx.request.body
-        let newpwd=crypto.createHash("md5").update(password).digest("hex");
+        let newpwd = crypto.createHash("md5").update(password).digest("hex");
         console.log(newpwd)
         let userInfo = await userModel.findOne({
             where: {
                 name
             }
-        })        
-        if (userInfo.password===newpwd) {
+        })
+        if (userInfo.password === newpwd) {
             let userToken = {
                     id: userInfo.id,
                     name: userInfo.name
@@ -38,13 +39,14 @@ class userController {
             }
         }
     }
-    static async signUp(ctx){
-        let {name,password,email}=ctx.request.body
-        let newpwd=crypto.createHash("md5").update(password).digest("hex");
+
+    static async signUp(ctx) {
+        let {name, password, email} = ctx.request.body
+        let newpwd = crypto.createHash("md5").update(password).digest("hex");
         await userModel.create({
-            name,password:newpwd,email
+            name, password: newpwd, email
         })
-        ctx.body={success:true}
+        ctx.body = {success: true}
     }
 }
 
