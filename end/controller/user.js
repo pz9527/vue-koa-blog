@@ -17,10 +17,7 @@ class userController {
             where: {
                 name
             }
-        })
-        console.log(userInfo.password)
-        console.log(newpwd)
-        
+        })        
         if (userInfo.password===newpwd) {
             let userToken = {
                     id: userInfo.id,
@@ -37,7 +34,7 @@ class userController {
         } else {
             ctx.body = {
                 success: false,
-                msg: '账号或密码错误'+newpwd
+                msg: '账号或密码错误'
             }
         }
     }
