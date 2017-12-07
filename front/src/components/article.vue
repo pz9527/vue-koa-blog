@@ -38,17 +38,20 @@
     background-color: rgba(0,0,0,0.03);
     font:14px/25px 'Comic Sans MS','courier new';
     padding: 0.5em;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top:5px;
+    margin-bottom:5px;
     border-radius: 5px;
   }
   blockquote {
-    padding: 0.4em;
+    padding: 0.2em ;
     border-left: 6px solid #ccc;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-size: 16px;
+    line-height:25px;
   }
-  a,p{
+  .article a,p{
     font-family:"	SimSun";
-    font-size: small;
+    font-size: 15px
   }
 </style>
