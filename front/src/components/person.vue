@@ -2,8 +2,7 @@
 <div>
 <span>文章编辑</span>
   <el-table
-    :data="allArticles"
-    >
+    :data="allArticles">
     <el-table-column
       prop="created_at"
       label="日期"
@@ -44,7 +43,7 @@
 import {mapState}from 'vuex'
 export default {
   created(){
-    
+
   },
   methods: {
     delClick(index,id) {

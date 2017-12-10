@@ -32,10 +32,14 @@ import {
   Main,
   Loading,
   Message,
+  Collapse,
+  CollapseItem,
 } from 'element-ui'
-
+import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
 Vue.use(Dialog)
 Vue.use(Pagination)
+Vue.use(Collapse)
+Vue.use(CollapseItem)
 Vue.use(Autocomplete)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
@@ -61,9 +65,11 @@ Vue.use(Main)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
 
+Vue.component(CollapseTransition.name, CollapseTransition)
 
 Vue.prototype.$message = Message
 import '../theme/index.css'
+import 'element-ui/lib/theme-chalk/base.css';
 import VueQuillEditor from 'vue-quill-editor'
 import './axios/interceptor'
 import store from './store'
@@ -82,22 +88,22 @@ Vue.prototype.$echarts = echarts
 Vue.use(VueQuillEditor)
 Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
-  
+
   if (to.meta.auth) {
     try {
       let token = localStorage.getItem('pagetoken')
       let decode = jwt.verify(token, "myjwtsecret");
-  
+
       next()
-  
+
     } catch (err) {
       localStorage.setItem('pagetoken',null)
       Message.error('请先登录')
       return next('/home');
     }
     // console.log('验证通过'+token.length)
-   
-    
+
+
   } else {
     next()
   }

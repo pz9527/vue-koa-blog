@@ -51,7 +51,6 @@
               </el-menu>
             </el-aside>
             <el-aside width="300px" v-if="see">
-
               <div class="v1_artivle" v-for="item in articleList">
                 <router-link :to="{ path:'/home/article',query:{id:item.id}}">
                   <p class="title"> {{item.title}}</p>
@@ -137,12 +136,10 @@
           let obj = {};
           obj.id = val.id
           obj.title = val.title;
-//          obj.author = val.user.name;
           obj.createAt = moment(val.createdAt)
             .startOf("day")
             .fromNow();
           return obj;
-          console.log(obj)
         });
       }
     }
